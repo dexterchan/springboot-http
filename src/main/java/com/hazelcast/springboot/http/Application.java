@@ -57,7 +57,6 @@ public class Application {
      */
     public static final String USE_HAZELCAST = "true";
 
-
     /**
      * Run the application under Spring Boot control.
      *
