@@ -4,6 +4,7 @@
 # application on the same machine.
 server:
   port: 8080
+ 
 
   
 #spring:
