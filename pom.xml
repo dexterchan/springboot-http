@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ~ ~ Copyright (c) 2008-2016, Hazelcast, Inc. All Rights Reserved. ~ 
+	~ Licensed under the Apache License, Version 2.0 (the "License"); ~ you may 
+	not use this file except in compliance with the License. ~ You may obtain 
+	a copy of the License at ~ ~ http://www.apache.org/licenses/LICENSE-2.0 ~ 
+	~ Unless required by applicable law or agreed to in writing, software ~ distributed 
+	under the License is distributed on an "AS IS" BASIS, ~ WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. ~ See the License for 
+	the specific language governing permissions and ~ limitations under the License. 
+	~ -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>jar</packaging>
+
+	<artifactId>springboot-http</artifactId>
+	<name>Spring Boot: Hazelcast for Session Replication</name>
+	<description>Spring Boot Hazelcast Integration Example of Embedded mode HTTP Session Replication</description>
+
+
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+	</parent>
+
+	<properties>
+		<!-- needed for checkstyle/findbugs -->
+		<main.basedir>${project.parent.parent.basedir}</main.basedir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- tag::actuator[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- end::actuator[] -->
+		<!-- tag::tests[] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/vue -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>vue</artifactId>
+			<version>2.3.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>vue-resource</artifactId>
+			<version>0.9.3</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.hazelcast/hazelcast-all -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-all</artifactId>
+			<version>3.8.3</version>
+		</dependency>
+
+		<!-- end::tests[] -->
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.4.0.RELEASE</version>
+
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
+		</plugins>
+	</build>
+</project>

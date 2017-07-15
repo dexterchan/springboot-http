@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+	<body>
+	
+		<!--/* Access fields from the HTTP Session object */-->
+	
+		<h3>Session Id</h3>
+		
+		<div class="panel panel-default" id="count">
+		<span class="label label-info" >{{ getSession }}</span>
+
+		<h3>Hits</h3>
+		<span class="label label-info" >{{ getCount }}</span>
+		</div>
+
+		<!--/* Confirm which cluster member this process contains */-->
+		<!-- 
+		<div th:if="${beans.containsKey('hazelcastInstance')}">
+			<hr/>
+				<div style="color:blue">
+					<p th:text="'Cluster member ' + ${@hazelcastInstance}"/>
+				</div>				
+			<hr/>
+		</div>
+		<div th:unless="${beans.containsKey('hazelcastInstance')}">
+			<hr/>
+				<div style="color:red">
+					<p>No Hazelcast @Bean</p>
+				</div>				
+			<hr/>
+		</div>
+		 -->
+		
+	</body>
+	
+	<script src="/webjars/vue/2.3.4/dist/vue.min.js"></script>
+	<script src="/webjars/vue-resource/0.9.3/vue-resource.min.js"></script>
+	<script src="/js/count.js"></script>
+</html>

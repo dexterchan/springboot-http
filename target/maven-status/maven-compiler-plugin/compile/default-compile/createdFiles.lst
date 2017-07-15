@@ -1,0 +1,5 @@
+com/hazelcast/springboot/http/countdetail.class
+com/hazelcast/springboot/http/HazelcastConfiguration.class
+com/hazelcast/springboot/http/Application.class
+com/hazelcast/springboot/http/RestfulController.class
+com/hazelcast/springboot/http/WebController.class
