@@ -11,9 +11,9 @@
 	<network>
 		<port auto-increment="true" port-count="100">5801</port>
 		<join>
-			<multicast enabled="false"></multicast>
+			<multicast enabled="true"></multicast>
 
-			<tcp-ip enabled="true">
+			<tcp-ip enabled="false">
 				<member>10.128.0.2</member>
 				<member>10.128.0.3</member>
 			</tcp-ip>
