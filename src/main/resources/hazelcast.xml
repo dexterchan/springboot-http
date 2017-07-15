@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hazelcast
-        xsi:schemaLocation="http://www.hazelcast.com/schema/config http://www.hazelcast.com/schema/config/hazelcast-config.xsd"
-        xmlns="http://www.hazelcast.com/schema/config"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xsi:schemaLocation="http://www.hazelcast.com/schema/config http://www.hazelcast.com/schema/config/hazelcast-config.xsd"
+	xmlns="http://www.hazelcast.com/schema/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
 	<group>
@@ -10,12 +9,14 @@
 		<password>dev-pass</password>
 	</group>
 	<network>
-	<port auto-increment="true" port-count="100">5801</port>
+		<port auto-increment="true" port-count="100">5801</port>
 		<join>
-			<multicast enabled="true"></multicast>
+			<multicast enabled="false"></multicast>
 
-			<!-- <tcp-ip enabled="true"> <member>192.168.100.001</member> <member>192.168.102.200</member> 
-				</tcp-ip> -->
+			<tcp-ip enabled="true">
+				<member>10.128.0.2</member>
+				<member>10.128.0.3</member>
+			</tcp-ip>
 		</join>
 	</network>
 
