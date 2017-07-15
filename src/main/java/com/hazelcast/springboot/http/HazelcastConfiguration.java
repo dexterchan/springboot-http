@@ -35,6 +35,7 @@ public class HazelcastConfiguration {
      *
      * @return Configuration for the Hazelcast instance
      */
+	/*
     @Bean
     public Config config() {
 
@@ -46,7 +47,7 @@ public class HazelcastConfiguration {
         joinConfig.getTcpIpConfig().setEnabled(true).setMembers(singletonList("127.0.0.1"));
 
         return config;
-    }
+    }*/
 
     /**
      * Create a web filter. Parameterize this with two properties,

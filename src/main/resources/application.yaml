@@ -3,4 +3,9 @@
 # This is necessary to be able to run multiple copies of the
 # application on the same machine.
 server:
-  port: 8080
+  port: 0
+
+  
+#spring:
+#  hazelcast:
+#    config: classpath:hazelcast.xml
