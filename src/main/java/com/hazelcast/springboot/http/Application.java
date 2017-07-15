@@ -55,7 +55,7 @@ public class Application {
      * This is a constant rather than a parameter to ensure all
      * instances run with the same setting.
      */
-    public static final String USE_HAZELCAST = "false";
+    public static final String USE_HAZELCAST = "true";
 
 
     /**
