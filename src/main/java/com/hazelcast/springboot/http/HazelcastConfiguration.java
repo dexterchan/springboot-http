@@ -35,7 +35,7 @@ public class HazelcastConfiguration {
      *
      * @return Configuration for the Hazelcast instance
      */
-	
+	/*
     @Bean
     public Config config() {
 
@@ -48,7 +48,7 @@ public class HazelcastConfiguration {
 
        
         return config;
-    }
+    }*/
 
     /**
      * Create a web filter. Parameterize this with two properties,
