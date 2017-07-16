@@ -1,16 +1,16 @@
 package com.hazelcast.springboot.http;
 
-import com.hazelcast.config.Config;
-import com.hazelcast.config.JoinConfig;
-import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.web.WebFilter;
+import java.util.Properties;
+
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Properties;
-
-import static java.util.Collections.singletonList;
+import com.hazelcast.config.Config;
+import com.hazelcast.config.EvictionPolicy;
+import com.hazelcast.config.MapConfig;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.web.WebFilter;
 
 /**
  * A conditional configuration that potentially adds the bean definitions in
@@ -35,19 +35,20 @@ public class HazelcastConfiguration {
      *
      * @return Configuration for the Hazelcast instance
      */
-	/*
+	
     @Bean
     public Config config() {
 
-        Config config = new Config();
+        Config config = new Config().addMapConfig(
+                // Set up TTL for the Map tracking received Messages IDs
+                new MapConfig()
+                        .setName(HazelStorage.myName)
+                        .setEvictionPolicy(EvictionPolicy.LRU)
+                        .setTimeToLiveSeconds(60 * 60));
 
-        JoinConfig joinConfig = config.getNetworkConfig().getJoin();
-
-        joinConfig.getMulticastConfig().setEnabled(false);
-        joinConfig.getTcpIpConfig().setEnabled(true).setMembers(singletonList("127.0.0.1"));
-
+       
         return config;
-    }*/
+    }
 
     /**
      * Create a web filter. Parameterize this with two properties,

@@ -12,7 +12,8 @@ var count = new Vue({
 		
 		countdetail : {
 			sessionid : 'NONE',
-			count : '0'
+			count : '0',
+			lastValue : ""
 		},
 		
 		errorMessage:''
@@ -34,6 +35,9 @@ var count = new Vue({
 	    },
 	    getCount: function () {
 	    	return this.countdetail.count;
+	    },
+	    getLastValue: function () {
+	    	return this.countdetail.lastValue;
 	    }
 	
 	}
